@@ -51,7 +51,8 @@ const images = {
   paywall: require("../assets/paywall.png"),
   about: require("../assets/about-business.png"),
   access: require("../assets/access.png"),
-  tablet: require("../assets/tablet.jpg")
+  tablet: require("../assets/tablet.jpg"),
+  example: require("../assets/example.png")
 };
 
 preloader(images);
@@ -128,22 +129,31 @@ export default class Presentation extends React.Component {
                 </Fill>
               </Layout>
           </Slide>
-          <Slide bgImage={images.tablet.replace("/", "")} bgDarken={0.75}>
-            <Heading size={4} caps lineHeight={1.5} textColor="primary">Der Markt</Heading>
-                <Text textSize="1.5em" textAlign="left" textColor="tertiary">
-                  Gesamtmarkt ca. € 3 Mrd. in 2016
-                </Text>
-                <br/>
-                <Text textSize="1.5em" textAlign="left" textColor="tertiary">
-                  Der Markt ist segmentiert in:
-                </Text>
-                <List textColor="tertiary" textAlign="left">
-                  <ListItem>E-Publishing</ListItem>
-                  <ListItem>Musik / Radio</ListItem>
-                  <ListItem>Gaming</ListItem>
-                  <ListItem>TV / Video</ListItem>
-                </List>
+          <Slide bgColor="tertiary">
+          <Heading size={5} caps lineHeight={1.5} textColor="primary">
+          Funktionsweise
+          </Heading>
+            <Image width="50%" src={images.example}/>
           </Slide>
+          <Slide bgImage={images.tablet.replace("/", "")} bgDarken={0.75}>
+            <Heading size={4} caps lineHeight={1.5} textColor="primary">
+              Der Markt
+            </Heading>
+            <Text textSize="1.5em" textAlign="left" textColor="tertiary">
+              Gesamtmarkt ca. € 3 Mrd. in 2016
+            </Text>
+            <br/>
+            <Text textSize="1.5em" textAlign="left" textColor="tertiary">
+              Der Markt ist segmentiert in:
+            </Text>
+            <List textColor="tertiary" textAlign="left">
+              <ListItem>E-Publishing</ListItem>
+              <ListItem>Musik / Radio</ListItem>
+              <ListItem>Gaming</ListItem>
+              <ListItem>TV / Video</ListItem>
+            </List>
+          </Slide>
+
           <Slide bgColor="tertiary" notes="How Redux works.">
             <Image src={images.reduxAnimation.replace("/", "")} margin="0px auto 40px" height="60vh"/>
             <Heading size={2} caps textColor="primary" textFont="primary">
