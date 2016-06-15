@@ -53,8 +53,8 @@ export default class Presentation extends React.Component {
   render() {
     return (
       <Spectacle theme={theme}>
-        <Deck transition={["zoom", "slide"]} transitionDuration={500}>
-          <Slide transition={["zoom"]} bgColor="primary">
+        <Deck transition={["slide"]} transitionDuration={500}>
+          <Slide bgColor="primary">
             <Heading size={1} fit caps lineHeight={1} textColor="black">
               Spectacle
             </Heading>
@@ -69,20 +69,20 @@ export default class Presentation extends React.Component {
             </Link>
             <Text textSize="1.5em" margin="20px 0px 0px" bold>Hit Your Right Arrow To Begin!</Text>
           </Slide>
-          <Slide transition={["slide"]} bgColor="black" notes="You can even put notes on your slide. How awesome is that?">
+          <Slide bgColor="black" notes="You can even put notes on your slide. How awesome is that?">
             <Image src={images.kat.replace("/", "")} margin="0px auto 40px" height="293px"/>
             <Heading size={2} caps fit textColor="primary" textFont="primary">
               Wait what?
             </Heading>
           </Slide>
-          <Slide transition={["zoom", "fade"]} bgColor="primary" notes="<ul><li>talk about that</li><li>and that</li></ul>">
+          <Slide bgColor="primary" notes="<ul><li>talk about that</li><li>and that</li></ul>">
             <CodePane
               lang="jsx"
               source={require("raw!../assets/deck.example")}
               margin="20px auto"
             />
           </Slide>
-          <Slide transition={["slide"]} bgImage={images.city.replace("/", "")} bgDarken={0.75}>
+          <Slide bgImage={images.city.replace("/", "")} bgDarken={0.75}>
             <Appear fid="1">
               <Heading size={1} caps fit textColor="primary">
                 Full Width
@@ -99,7 +99,7 @@ export default class Presentation extends React.Component {
               </Heading>
             </Appear>
           </Slide>
-          <Slide transition={["zoom", "fade"]} bgColor="primary">
+          <Slide bgColor="primary">
             <Heading caps fit>Flexible Layouts</Heading>
             <Layout>
               <Fill>
@@ -114,13 +114,13 @@ export default class Presentation extends React.Component {
               </Fill>
             </Layout>
           </Slide>
-          <Slide transition={["slide"]} bgColor="black">
+          <Slide bgColor="black">
             <BlockQuote>
               <Quote>Wonderfully formatted quotes</Quote>
               <Cite>Ken Wheeler</Cite>
             </BlockQuote>
           </Slide>
-          <Slide transition={["spin", "zoom"]} bgColor="tertiary">
+          <Slide bgColor="tertiary">
             <Heading caps fit size={1} textColor="primary">
               Inline Markdown
             </Heading>
@@ -135,7 +135,7 @@ You can write inline images, [Markdown Links](http://commonmark.org), paragraph 
               `}
             </Markdown>
           </Slide>
-          <Slide transition={["slide", "spin"]} bgColor="primary">
+          <Slide bgColor="primary">
             <Heading caps fit size={1} textColor="tertiary">
               Smooth
             </Heading>
@@ -143,7 +143,7 @@ You can write inline images, [Markdown Links](http://commonmark.org), paragraph 
               Combinable Transitions
             </Heading>
           </Slide>
-          <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
+          <Slide bgColor="secondary" textColor="primary">
             <List>
               <Appear><ListItem>Inline style based theme system</ListItem></Appear>
               <Appear><ListItem>Autofit text</ListItem></Appear>
@@ -153,13 +153,13 @@ You can write inline images, [Markdown Links](http://commonmark.org), paragraph 
               <Appear><ListItem>And...</ListItem></Appear>
             </List>
           </Slide>
-          <Slide transition={["slide"]} bgColor="primary">
+          <Slide bgColor="primary">
             <Heading size={1} caps fit textColor="tertiary">
               Your presentations are interactive
             </Heading>
             <Interactive/>
           </Slide>
-          <Slide transition={["spin", "slide"]} bgColor="tertiary">
+          <Slide bgColor="tertiary">
             <Heading size={1} caps fit lineHeight={1.5} textColor="primary">
               Made with love in Seattle by
             </Heading>
