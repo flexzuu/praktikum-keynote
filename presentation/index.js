@@ -43,7 +43,8 @@ const images = {
   logo: require("../assets/plenigo-logo.png"),
   markdown: require("../assets/markdown.png"),
   man: require("../assets/man.jpg"),
-  paywall: require("../assets/paywall.png")
+  paywall: require("../assets/paywall.png"),
+  about: require("../assets/about-business.png")
 };
 
 preloader(images);
@@ -67,7 +68,7 @@ export default class Presentation extends React.Component {
               Fabian Beliza & Jonas Faber
             </Text>
           </Slide>
-          <Slide bgColor="primary">
+          <Slide bgColor="primary" notes="Bisher ist die technische Realisierung aufwändig und teuer, somit gerade für kleinere und mittlere Anbieter und Verlage kaum zu realisieren">
                 <Layout>
                 <Fill>
                   <Image src={images.paywall}/>
@@ -79,8 +80,26 @@ export default class Presentation extends React.Component {
                 </Fill>
             </Layout>
           </Slide>
+          <Slide bgColor="tertiary" notes="Plenigo Kunden zahlen eine monatliche Miete sowie ein Provision auf Verkäufe">
+            <Heading size={2} caps lineHeight={1.5} textColor="primary">Paid-Content</Heading>
+              <Layout>
+                <Fill>
+                  <Image src={images.about}/>
+                </Fill>
+                <Fill>
+                  <Text textSize="1.5em" textAlign="right">
+                    <List>
+                      <ListItem>Schlüsselfertige Lösung</ListItem>
+                      <ListItem>Software-As-A-Service</ListItem>
+                      <ListItem>Schnelle Implementierung</ListItem>
+                      <ListItem>Plugins und SDKs</ListItem>
+                    </List>
+                  </Text>
+                </Fill>
+              </Layout>
+          </Slide>
           <Slide bgColor="tertiary">
-            <Heading size={7} caps fit lineHeight={1} textColor="primary">Was bietet plenigo?</Heading>
+            <Heading size={2} caps lineHeight={1} textColor="primary">Was bietet plenigo?</Heading>
               <List>
                 <ListItem>Paywall</ListItem>
                 <ListItem>Nutzerverwaltung</ListItem>
