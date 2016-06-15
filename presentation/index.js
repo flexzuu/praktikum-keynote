@@ -42,7 +42,8 @@ const images = {
   kat: require("../assets/kat.png"),
   logo: require("../assets/plenigo-logo.png"),
   markdown: require("../assets/markdown.png"),
-  man: require("../assets/man.jpg")
+  man: require("../assets/man.jpg"),
+  paywall: require("../assets/paywall.png")
 };
 
 preloader(images);
@@ -57,29 +58,37 @@ export default class Presentation extends React.Component {
     return (
       <Spectacle theme={theme}>
         <Deck transition={["fade", "slide"]} transitionDuration={500} progress="bar">
-          <Slide bgImage={images.man.replace("/", "")} bgDarken={0.75}>
+          <Slide bgImage={images.man.replace("/", "")} bgDarken={0.7}>
             <Heading size={2} caps fit lineHeight={1.5} textColor="tertiary">
               Praxissemester bei
             </Heading>
-            <Link href="http://www.plenigo.com"><Image width="80%" src={images.logo}/></Link>
-            <Text textSize="1.5em" margin="50px 0px 0px 0px" textColor="tertiary" textAlign="left">
+            <Image width="80%" src={images.logo}/>
+            <Text textSize="1.5em" margin="100px 0px 0px 0px" textColor="tertiary">
               Fabian Beliza & Jonas Faber
             </Text>
           </Slide>
           <Slide bgColor="primary">
-            <Heading size={1} fit caps lineHeight={1} textColor="black">
-              Spectacle
-            </Heading>
-            <Heading size={1} fit caps>
-              A ReactJS Presentation Library
-            </Heading>
-            <Heading size={1} fit caps textColor="black">
-              Where You Can Write Your Decks In JSX
-            </Heading>
-            <Link href="https://github.com/FormidableLabs/spectacle">
-              <Text bold caps textColor="tertiary">View on Github</Text>
-            </Link>
-            <Text textSize="1.5em" margin="20px 0px 0px" bold>Hit Your Right Arrow To Begin!</Text>
+                <Layout>
+                <Fill>
+                  <Image src={images.paywall}/>
+                </Fill>
+                <Fill>
+                  <Text textSize="1.5em" textAlign="right">
+                    plenigo ist eine Technologie Plattform, die den Vertrieb digitaler Produkte – Texte, Videos oder Musik – ermöglicht
+                  </Text>
+                </Fill>
+            </Layout>
+          </Slide>
+          <Slide bgColor="tertiary">
+            <Heading size={7} caps fit lineHeight={1} textColor="primary">Was bietet plenigo?</Heading>
+              <List>
+                <ListItem>Paywall</ListItem>
+                <ListItem>Nutzerverwaltung</ListItem>
+                <ListItem>Produktverwaltung</ListItem>
+                <ListItem>Zahlungen</ListItem>
+                <ListItem>Rechnungsstellung</ListItem>
+                <ListItem>CRM-Funktionen</ListItem>
+              </List>
           </Slide>
           <Slide bgColor="tertiary" notes="How Redux works.">
             <Image src={images.reduxAnimation.replace("/", "")} margin="0px auto 40px" height="60vh"/>
