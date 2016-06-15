@@ -37,6 +37,7 @@ require("spectacle/lib/themes/default/index.css");
 
 
 const images = {
+  reduxAnimation: require("../assets/redux.gif"),
   city: require("../assets/city.jpg"),
   kat: require("../assets/kat.png"),
   logo: require("../assets/formidable-logo.svg"),
@@ -48,12 +49,19 @@ preloader(images);
 const theme = createTheme({
   primary: "#00a6b4"
 });
+theme.screen.progress.bar.bar.background = "rgba(125, 125, 125, 0.8)";
 
 export default class Presentation extends React.Component {
   render() {
     return (
       <Spectacle theme={theme}>
-        <Deck transition={["slide"]} transitionDuration={500}>
+        <Deck transition={["slide"]} transitionDuration={500} progress="bar">
+          <Slide bgColor="tertiary">
+            <Heading size={1} caps fit lineHeight={1.5} textColor="primary">
+              Made with love in Seattle by
+            </Heading>
+            <Link href="http://www.formidablelabs.com"><Image width="100%" src={images.logo}/></Link>
+          </Slide>
           <Slide bgColor="primary">
             <Heading size={1} fit caps lineHeight={1} textColor="black">
               Spectacle
@@ -69,10 +77,10 @@ export default class Presentation extends React.Component {
             </Link>
             <Text textSize="1.5em" margin="20px 0px 0px" bold>Hit Your Right Arrow To Begin!</Text>
           </Slide>
-          <Slide bgColor="black" notes="You can even put notes on your slide. How awesome is that?">
-            <Image src={images.kat.replace("/", "")} margin="0px auto 40px" height="293px"/>
-            <Heading size={2} caps fit textColor="primary" textFont="primary">
-              Wait what?
+          <Slide bgColor="tertiary" notes="How Redux works.">
+            <Image src={images.reduxAnimation.replace("/", "")} margin="0px auto 40px" height="60vh"/>
+            <Heading size={2} caps textColor="primary" textFont="primary">
+              Redux
             </Heading>
           </Slide>
           <Slide bgColor="primary" notes="<ul><li>talk about that</li><li>and that</li></ul>">
@@ -158,12 +166,6 @@ You can write inline images, [Markdown Links](http://commonmark.org), paragraph 
               Your presentations are interactive
             </Heading>
             <Interactive/>
-          </Slide>
-          <Slide bgColor="tertiary">
-            <Heading size={1} caps fit lineHeight={1.5} textColor="primary">
-              Made with love in Seattle by
-            </Heading>
-            <Link href="http://www.formidablelabs.com"><Image width="100%" src={images.logo}/></Link>
           </Slide>
         </Deck>
       </Spectacle>
