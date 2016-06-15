@@ -19,7 +19,11 @@ import {
   Quote,
   Slide,
   Spectacle,
-  Text
+  Text,
+  Table,
+  TableRow,
+  TableHeaderItem,
+  TableItem
 } from "spectacle";
 
 // Import image preloader util
@@ -45,7 +49,8 @@ const images = {
   man: require("../assets/man.jpg"),
   paywall: require("../assets/paywall.png"),
   about: require("../assets/about-business.png"),
-  access: require("../assets/access.png")
+  access: require("../assets/access.png"),
+  tablet: require("../assets/tablet.jpg")
 };
 
 preloader(images);
@@ -118,6 +123,22 @@ export default class Presentation extends React.Component {
                   <Image src={images.access}/>
                 </Fill>
               </Layout>
+          </Slide>
+          <Slide bgImage={images.tablet.replace("/", "")} bgDarken={0.75}>
+            <Heading size={4} caps lineHeight={1.5} textColor="primary">Der Markt</Heading>
+                <Text textSize="1.5em" textAlign="left" textColor="tertiary">
+                  Gesamtmarkt ca. € 3 Mrd. in 2016
+                </Text>
+                <br/>
+                <Text textSize="1.5em" textAlign="left" textColor="tertiary">
+                  Der Markt ist segmentiert in:
+                </Text>
+                <List textColor="tertiary" textAlign="left">
+                  <ListItem>E-Publishing</ListItem>
+                  <ListItem>Musik / Radio</ListItem>
+                  <ListItem>Gaming</ListItem>
+                  <ListItem>TV / Video</ListItem>
+                </List>
           </Slide>
           <Slide bgColor="tertiary" notes="How Redux works.">
             <Image src={images.reduxAnimation.replace("/", "")} margin="0px auto 40px" height="60vh"/>
