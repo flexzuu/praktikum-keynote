@@ -44,7 +44,8 @@ const images = {
   markdown: require("../assets/markdown.png"),
   man: require("../assets/man.jpg"),
   paywall: require("../assets/paywall.png"),
-  about: require("../assets/about-business.png")
+  about: require("../assets/about-business.png"),
+  access: require("../assets/access.png")
 };
 
 preloader(images);
@@ -81,7 +82,7 @@ export default class Presentation extends React.Component {
             </Layout>
           </Slide>
           <Slide bgColor="tertiary" notes="Plenigo Kunden zahlen eine monatliche Miete sowie ein Provision auf Verkäufe">
-            <Heading size={2} caps lineHeight={1.5} textColor="primary">Paid-Content</Heading>
+            <Heading size={4} caps lineHeight={1.5} textColor="primary">Paid-Content</Heading>
               <Layout>
                 <Fill>
                   <Image src={images.about}/>
@@ -99,15 +100,24 @@ export default class Presentation extends React.Component {
               </Layout>
           </Slide>
           <Slide bgColor="tertiary">
-            <Heading size={2} caps lineHeight={1} textColor="primary">Was bietet plenigo?</Heading>
-              <List>
-                <ListItem>Paywall</ListItem>
-                <ListItem>Nutzerverwaltung</ListItem>
-                <ListItem>Produktverwaltung</ListItem>
-                <ListItem>Zahlungen</ListItem>
-                <ListItem>Rechnungsstellung</ListItem>
-                <ListItem>CRM-Funktionen</ListItem>
-              </List>
+            <Heading size={4} caps lineHeight={1.5} textColor="primary">Was bietet plenigo?</Heading>
+              <Layout>
+                <Fill>
+                  <Text textSize="1.5em" textAlign="right">
+                    <List>
+                      <ListItem>Paywall</ListItem>
+                      <ListItem>Nutzerverwaltung</ListItem>
+                      <ListItem>Produktverwaltung</ListItem>
+                      <ListItem>Zahlungen</ListItem>
+                      <ListItem>Rechnungsstellung</ListItem>
+                      <ListItem>CRM-Funktionen</ListItem>
+                    </List>
+                  </Text>
+                </Fill>
+                <Fill>
+                  <Image src={images.access}/>
+                </Fill>
+              </Layout>
           </Slide>
           <Slide bgColor="tertiary" notes="How Redux works.">
             <Image src={images.reduxAnimation.replace("/", "")} margin="0px auto 40px" height="60vh"/>
