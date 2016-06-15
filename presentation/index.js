@@ -28,6 +28,7 @@ import preloader from "spectacle/lib/utils/preloader";
 // Import theme
 import createTheme from "spectacle/lib/themes/default";
 
+import CodeSplit from "./codesplit";
 // Import custom component
 import Interactive from "../assets/interactive";
 
@@ -52,7 +53,10 @@ preloader(images);
 const theme = createTheme({
   primary: "#00a6b4"
 });
-theme.screen.progress.bar.bar.background = "rgba(125, 125, 125, 0.8)";
+const grey = "rgba(125, 125, 125, 0.8)";
+theme.screen.progress.bar.bar.background = grey;
+theme.screen.controls.nextIcon.fill = grey;
+theme.screen.controls.prevIcon.fill = grey;
 
 export default class Presentation extends React.Component {
   render() {
@@ -68,13 +72,13 @@ export default class Presentation extends React.Component {
               Fabian Beliza & Jonas Faber
             </Text>
           </Slide>
-          <Slide bgColor="primary" notes="Bisher ist die technische Realisierung aufwändig und teuer, somit gerade für kleinere und mittlere Anbieter und Verlage kaum zu realisieren">
+          <Slide bgColor="tertiary" notes="Bisher ist die technische Realisierung aufwändig und teuer, somit gerade für kleinere und mittlere Anbieter und Verlage kaum zu realisieren">
                 <Layout>
                 <Fill>
                   <Image src={images.paywall}/>
                 </Fill>
                 <Fill>
-                  <Text textSize="1.5em" textAlign="right">
+                  <Text textColor="primary" textSize="1.5em" textAlign="right">
                     plenigo ist eine Technologie Plattform, die den Vertrieb digitaler Produkte – Texte, Videos oder Musik – ermöglicht
                   </Text>
                 </Fill>
@@ -114,13 +118,6 @@ export default class Presentation extends React.Component {
             <Heading size={2} caps textColor="primary" textFont="primary">
               Redux
             </Heading>
-          </Slide>
-          <Slide bgColor="primary" notes="<ul><li>talk about that</li><li>and that</li></ul>">
-            <CodePane
-              lang="jsx"
-              source={require("raw!../assets/deck.example")}
-              margin="20px auto"
-            />
           </Slide>
           <Slide bgImage={images.city.replace("/", "")} bgDarken={0.75}>
             <Appear fid="1">
@@ -193,11 +190,13 @@ You can write inline images, [Markdown Links](http://commonmark.org), paragraph 
               <Appear><ListItem>And...</ListItem></Appear>
             </List>
           </Slide>
-          <Slide bgColor="primary">
+          <Slide align="center top" bgColor="primary">
             <Heading size={1} caps fit textColor="tertiary">
               Your presentations are interactive
             </Heading>
-            <Interactive/>
+            <CodeSplit source={require("raw!../assets/interactive.example")}>
+              <Interactive/>
+            </CodeSplit>
           </Slide>
         </Deck>
       </Spectacle>
