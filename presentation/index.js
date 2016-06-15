@@ -153,7 +153,6 @@ export default class Presentation extends React.Component {
               <ListItem>TV / Video</ListItem>
             </List>
           </Slide>
-
           <Slide bgColor="tertiary" notes="How Redux works.">
             <Image src={images.reduxAnimation.replace("/", "")} margin="0px auto 40px" height="60vh"/>
             <Heading size={2} caps textColor="primary" textFont="primary">
