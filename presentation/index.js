@@ -58,10 +58,13 @@ export default class Presentation extends React.Component {
       <Spectacle theme={theme}>
         <Deck transition={["slide"]} transitionDuration={500} progress="bar">
           <Slide bgImage={images.man.replace("/", "")} bgDarken={0.75}>
-            <Heading size={1} caps fit lineHeight={1.5} textColor="tertiary">
+            <Heading size={2} caps fit lineHeight={1.5} textColor="tertiary">
               Praxissemester bei
             </Heading>
             <Link href="http://www.plenigo.com"><Image width="80%" src={images.logo}/></Link>
+            <Text textSize="1.5em" margin="50px 0px 0px 0px" textColor="tertiary" textAlign="left">
+              Fabian Beliza & Jonas Faber
+            </Text>
           </Slide>
           <Slide bgColor="primary">
             <Heading size={1} fit caps lineHeight={1} textColor="black">
