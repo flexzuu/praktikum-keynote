@@ -40,8 +40,9 @@ const images = {
   reduxAnimation: require("../assets/redux.gif"),
   city: require("../assets/city.jpg"),
   kat: require("../assets/kat.png"),
-  logo: require("../assets/formidable-logo.svg"),
-  markdown: require("../assets/markdown.png")
+  logo: require("../assets/plenigo-logo.png"),
+  markdown: require("../assets/markdown.png"),
+  man: require("../assets/man.jpg")
 };
 
 preloader(images);
@@ -56,11 +57,14 @@ export default class Presentation extends React.Component {
     return (
       <Spectacle theme={theme}>
         <Deck transition={["fade", "slide"]} transitionDuration={500} progress="bar">
-          <Slide bgColor="tertiary">
-            <Heading size={1} caps fit lineHeight={1.5} textColor="primary">
-              Made with love in Seattle by
+          <Slide bgImage={images.man.replace("/", "")} bgDarken={0.75}>
+            <Heading size={2} caps fit lineHeight={1.5} textColor="tertiary">
+              Praxissemester bei
             </Heading>
-            <Link href="http://www.formidablelabs.com"><Image width="100%" src={images.logo}/></Link>
+            <Link href="http://www.plenigo.com"><Image width="80%" src={images.logo}/></Link>
+            <Text textSize="1.5em" margin="50px 0px 0px 0px" textColor="tertiary" textAlign="left">
+              Fabian Beliza & Jonas Faber
+            </Text>
           </Slide>
           <Slide bgColor="primary">
             <Heading size={1} fit caps lineHeight={1} textColor="black">
