@@ -1,32 +1,30 @@
+public class PaywallStateTest extends BaseApiTest{
+
+    private Paywall expectedPaywallState;
+    private final static boolean PAYWALL_STATE = true;
+
+    @Override
+    @Before
+    public void setup() {
+        super.setup();
+        expectedPaywallState = new Paywall(PAYWALL_STATE);
+        addPathToBaseTarget("paywall");
+        addPathToBaseTarget("state");
+    }
+
     @Test
-    public void testSuccessfulAppManagementFlow() throws PlenigoException, JsonProcessingException {
-        String actualToken = testSuccessfulUserAppToken().getToken();
-
-        String actualAppId = testSuccessfulUserAppData(actualToken).getCustomerAppId();
-
-        testSuccessfulCustomerApps(actualAppId);
-
-        testSuccessfulAccessProduct(actualAppId);
-
-        testSuccessfulDeleteCustomerApp(actualAppId);
-
-    }
-
-    public AppAccessToken testSuccessfulUserAppToken() throws PlenigoException, JsonProcessingException {
-
-        ObjectMapper mapper = new ObjectMapper();
-        String json = mapper.writeValueAsString(appAccessTokenRequest);
-
-        AppAccessToken actualAppAccessToken = getBaseTarget()
-                .path("token")
-                .path(CUSTOMER_ID)
-                .request(MediaType.APPLICATION_JSON_TYPE)
+    public void testSuccessfulPaywallState() throws PlenigoException{
+        Paywall actualPaywallState = getBaseTarget()
+                .request()
                 .header("plenigoToken", generateToken())
-                .post(Entity.json(json), AppAccessToken.class);
+                .get(Paywall.class);
 
-
-        assertEquals(expectedAppAccessToken.getCustomerId(), actualAppAccessToken.getCustomerId());
-        assertEquals(expectedAppAccessToken.getDescription(), actualAppAccessToken.getDescription());
-
-        return actualAppAccessToken;
+        assertEquals(expectedPaywallState.isEnabled(), actualPaywallState.isEnabled());
     }
+
+    @Test
+    public void testNoTokenPaywallState(){
+        testNoToken();
+    }
+
+}

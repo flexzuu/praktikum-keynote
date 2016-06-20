@@ -177,12 +177,12 @@ export default class Presentation extends React.Component {
           <Slide bgImage={images.coding.replace("/", "")} bgDarken={0.75}>
             <Appear fid="1">
               <Heading size={1} fit caps lineHeight={1.5} textColor="primary">
-                Projekte
+                Projekt
               </Heading>
             </Appear>
             <Appear fid="2">
               <Heading size={2} caps textColor="tertiary">
-                I. Api-tests
+                1. Api-tests
               </Heading>
             </Appear>
           </Slide>
@@ -203,10 +203,18 @@ export default class Presentation extends React.Component {
             </List>
           </Slide>
 
-          <Slide bgColor="tertiary">
-              <CodeSplit source={require("raw!../assets/api.example")} lang="java">
-                <Text> Test </Text>
-              </CodeSplit>
+          <Slide bgColor="tertiary" transition={["fade"]}>
+            <Heading size={4} caps textColor="primary">
+            Beispiel
+            </Heading>
+            <CodePane source={require("raw!../assets/api.example")} lang="java" />
+          </Slide>
+
+          <Slide bgColor="tertiary" transition={["fade"]}>
+            <Heading size={4} caps textColor="primary">
+            Beispiel
+            </Heading>
+            <CodePane source={require("raw!../assets/paywall.example")} lang="java" />
           </Slide>
 
           <Slide bgColor="tertiary" notes="How Redux works.">
