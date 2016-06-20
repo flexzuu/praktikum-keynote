@@ -45,7 +45,6 @@ const images = {
   reduxAnimation: require("../assets/redux.gif"),
   clientServerInteraction: require("../assets/client-server-interaction.svg"),
   reduxDevtools: require("../assets/redux-devtools.png"),
-  plenigoWebsite: require("../assets/plenigoWebsite.png"),
   city: require("../assets/city.jpg"),
   kat: require("../assets/kat.png"),
   logo: require("../assets/plenigo-logo.png"),
@@ -60,7 +59,8 @@ const images = {
   coding: require("../assets/coding.jpg"),
   api: require("../assets/api.png"),
   websiteBackground: require("../assets/websiteBackground.jpg"),
-  plenigoSpring: require("../assets/plenigoSpring.png")
+  plenigoSpring: require("../assets/plenigoSpring.png"),
+  control: require("../assets/control.jpg")
 };
 
 preloader(images);
@@ -233,14 +233,11 @@ export default class Presentation extends React.Component {
             <Image src={images.plenigoSpring} width="140%" margin="-90px 0px 0px -180px"/>
           </Slide>
 
-          <Slide transition={["fade"]} bgImage={images.plenigoWebsite.replace("/", "")} bgDarken={0.2} />
-          <Slide transition={["fade"]} bgImage={images.plenigoWebsite.replace("/", "")} bgDarken={0.75}>
-            <Appear>
-              <Heading size={2} caps textColor="primary">
-                Nicht nur statischer Inhalt
-              </Heading>
-            </Appear>
-            <List textColor="tertiary">
+          <Slide bgColor="tertiary">
+            <Heading size={2} caps textColor="primary">
+              Nicht nur statischer Inhalt
+            </Heading>
+            <List>
               <Appear><ListItem>Inline style based theme system</ListItem></Appear>
               <Appear><ListItem>Autofit text</ListItem></Appear>
               <Appear><ListItem>Flexbox layout system</ListItem></Appear>
@@ -248,6 +245,17 @@ export default class Presentation extends React.Component {
               <Appear><ListItem>PDF export</ListItem></Appear>
               <Appear><ListItem>And...</ListItem></Appear>
             </List>
+          </Slide>
+
+          <Slide bgImage={images.control} bgDarken={0.75}>
+            <Heading size={1} fit caps lineHeight={1.5} textColor="primary">
+              Projekt
+            </Heading>
+            <Appear>
+              <Heading size={2} caps textColor="tertiary">
+                3. Admin Dashboard
+              </Heading>
+            </Appear>
           </Slide>
 
           <Slide bgColor="tertiary" notes="How Redux works.">
@@ -264,12 +272,11 @@ export default class Presentation extends React.Component {
             </Heading>
           </Slide>
 
-          <Slide bgImage={images.reduxDevtools.replace("/", "")} bgDarken={0.3}>
-            <Appear>
-              <Heading size={1} caps fit textColor="primary">
-                Demo
-              </Heading>
-            </Appear>
+          <Slide transition={["fade"]} bgImage={images.reduxDevtools.replace("/", "")} bgDarken={0.2} />
+          <Slide transition={["fade"]} bgImage={images.reduxDevtools.replace("/", "")} bgDarken={0.75}>
+            <Heading size={1} caps fit textColor="primary">
+              Demo
+            </Heading>
           </Slide>
 
           <Slide bgColor="black">
