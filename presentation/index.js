@@ -53,7 +53,9 @@ const images = {
   access: require("../assets/access.png"),
   tablet: require("../assets/tablet.jpg"),
   example: require("../assets/example.png"),
-  integration: require("../assets/integration.png")
+  integration: require("../assets/integration.png"),
+  coding: require("../assets/coding.jpg"),
+  api: require("../assets/api.png")
 };
 
 preloader(images);
@@ -163,6 +165,41 @@ export default class Presentation extends React.Component {
               </Fill>
             </Layout>
           </Slide>
+          <Slide bgImage={images.coding.replace("/", "")} bgDarken={0.75}>
+          <Appear fid="1">
+            <Heading size={1} fit caps lineHeight={1.5} textColor="primary">
+              Projekte
+            </Heading>
+          </Appear>
+          <Appear fid="2">
+            <Heading size={2} caps textColor="tertiary">
+              I. Api-tests
+            </Heading>
+          </Appear>
+          </Slide>
+
+          <Slide bgColor="tertiary">
+            <Image src={images.api} width="140%" margin="-90px 0px 0px -180px"/>
+          </Slide>
+
+          <Slide bgColor="tertiary">
+            <Heading size={4} caps lineHeight={1.5} textColor="primary">
+            Ablauf
+            </Heading>
+            <List textColor="secondary" textAlign="left">
+              <ListItem>Testdaten erstellen</ListItem>
+              <ListItem>Anfragen an API senden</ListItem>
+              <ListItem>Antwort erhalten</ListItem>
+              <ListItem>Antwort mit erwartetem Ergebnis vergleichen</ListItem>
+            </List>
+          </Slide>
+
+          <Slide bgColor="tertiary">
+              <CodeSplit source={require("raw!../assets/api.example")}>
+                <Text> Test </Text>
+              </CodeSplit>
+          </Slide>
+
           <Slide bgColor="tertiary" notes="How Redux works.">
             <Image src={images.reduxAnimation.replace("/", "")} margin="0px auto 40px" height="60vh"/>
             <Heading size={2} caps textColor="primary" textFont="primary">
