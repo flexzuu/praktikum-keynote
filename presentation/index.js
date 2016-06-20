@@ -233,17 +233,16 @@ export default class Presentation extends React.Component {
             <Image src={images.plenigoSpring} width="140%" margin="-90px 0px 0px -180px"/>
           </Slide>
 
-          <Slide bgColor="tertiary">
+          <Slide bgColor="tertiary" notes="Grails wäre bei Update zerschossen. Server liefert statisches HTML aus">
             <Heading size={4} caps textColor="primary">
               Umzug von Grails auf Spring
             </Heading>
             <List>
-              <Appear><ListItem>Inline style based theme system</ListItem></Appear>
-              <Appear><ListItem>Autofit text</ListItem></Appear>
-              <Appear><ListItem>Flexbox layout system</ListItem></Appear>
-              <Appear><ListItem>React-Router navigation</ListItem></Appear>
-              <Appear><ListItem>PDF export</ListItem></Appear>
-              <Appear><ListItem>And...</ListItem></Appear>
+              <Appear><ListItem>Alle Seiten vor dem Backend</ListItem></Appear>
+              <Appear><ListItem>Rund 25 Seiten</ListItem></Appear>
+              <Appear><ListItem>Client-Server Struktur</ListItem></Appear>
+              <Appear><ListItem>Internationalisierung</ListItem></Appear>
+              <Appear><ListItem>Nur notwendige Bilder, CSS und JS</ListItem></Appear>
             </List>
           </Slide>
 
