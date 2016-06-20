@@ -60,7 +60,8 @@ const images = {
   api: require("../assets/api.png"),
   websiteBackground: require("../assets/websiteBackground.jpg"),
   plenigoSpring: require("../assets/plenigoSpring.png"),
-  control: require("../assets/control.jpg")
+  control: require("../assets/control.jpg"),
+  dashboard: require("../assets/adminDashboard.png")
 };
 
 preloader(images);
@@ -247,7 +248,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide bgColor="tertiary">
-            <Heading size={2} caps textColor="primary">
+            <Heading size={4} caps textColor="primary">
               Nicht nur statischer Inhalt
             </Heading>
             <List>
@@ -269,6 +270,23 @@ export default class Presentation extends React.Component {
                 3. Admin Dashboard
               </Heading>
             </Appear>
+          </Slide>
+
+          <Slide bgColor="tertiary">
+            <Image src={images.dashboard} width="140%" margin="-90px 0px 0px -180px"/>
+          </Slide>
+
+          <Slide bgColor="tertiary">
+            <Heading size={4} caps textColor="primary">
+              Funktionen
+            </Heading>
+            <List>
+              <Appear><ListItem>Nutzer Übersicht</ListItem></Appear>
+              <Appear><ListItem>Firmen Übersicht</ListItem></Appear>
+              <Appear><ListItem>Firmen Daten validieren</ListItem></Appear>
+              <Appear><ListItem>Mail Vorlagen erstellen und bearbeiten</ListItem></Appear>
+              <Appear><ListItem>Admin Nutzer verwalten</ListItem></Appear>
+            </List>
           </Slide>
 
           <Slide bgColor="tertiary" notes="How Redux works.">
