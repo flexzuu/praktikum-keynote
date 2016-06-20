@@ -43,6 +43,7 @@ require("spectacle/lib/themes/default/index.css");
 
 const images = {
   reduxAnimation: require("../assets/redux.gif"),
+  clientServerInteraction: require("../assets/client-server-interaction.svg"),
   city: require("../assets/city.jpg"),
   kat: require("../assets/kat.png"),
   logo: require("../assets/plenigo-logo.png"),
@@ -165,8 +166,14 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide bgColor="tertiary" notes="How Redux works.">
             <Image src={images.reduxAnimation.replace("/", "")} margin="0px auto 40px" height="60vh"/>
-            <Heading size={2} caps textColor="primary" textFont="primary">
+            <Heading size={3} caps textColor="primary" textFont="primary">
               Redux
+            </Heading>
+          </Slide>
+          <Slide bgColor="tertiary" notes="Client Server Interaction">
+            <Image src={images.clientServerInteraction.replace("/", "")} margin="0px auto 40px" height="60vh"/>
+            <Heading size={3} caps textColor="primary" textFont="primary">
+              Client Server Interaction
             </Heading>
           </Slide>
           <Slide bgImage={images.city.replace("/", "")} bgDarken={0.75}>
@@ -241,8 +248,8 @@ You can write inline images, [Markdown Links](http://commonmark.org), paragraph 
             </List>
           </Slide>
           <Slide align="center top" bgColor="primary">
-            <Heading size={1} caps fit textColor="tertiary">
-              Your presentations are interactive
+            <Heading size={2} caps fit textColor="tertiary">
+              View: React
             </Heading>
             <CodeSplit source={require("raw!../assets/interactive.example")}>
               <Interactive/>
