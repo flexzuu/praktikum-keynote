@@ -45,6 +45,7 @@ const images = {
   reduxAnimation: require("../assets/redux.gif"),
   clientServerInteraction: require("../assets/client-server-interaction.svg"),
   reduxDevtools: require("../assets/redux-devtools.png"),
+  plenigoWebsite: require("../assets/plenigo-spring-website.png"),
   city: require("../assets/city.jpg"),
   kat: require("../assets/kat.png"),
   logo: require("../assets/plenigo-logo.png"),
@@ -217,6 +218,23 @@ export default class Presentation extends React.Component {
             <CodePane source={require("raw!../assets/paywall.example")} lang="java" />
           </Slide>
 
+          <Slide transition={["fade"]} bgImage={images.plenigoWebsite.replace("/", "")} bgDarken={0.2} />
+          <Slide transition={["fade"]} bgImage={images.plenigoWebsite.replace("/", "")} bgDarken={0.75}>
+            <Appear>
+              <Heading size={2} caps textColor="primary">
+                Nicht nur statischer Inhalt
+              </Heading>
+            </Appear>
+            <List textColor="tertiary">
+              <Appear><ListItem>Inline style based theme system</ListItem></Appear>
+              <Appear><ListItem>Autofit text</ListItem></Appear>
+              <Appear><ListItem>Flexbox layout system</ListItem></Appear>
+              <Appear><ListItem>React-Router navigation</ListItem></Appear>
+              <Appear><ListItem>PDF export</ListItem></Appear>
+              <Appear><ListItem>And...</ListItem></Appear>
+            </List>
+          </Slide>
+
           <Slide bgColor="tertiary" notes="How Redux works.">
             <Image src={images.reduxAnimation.replace("/", "")} margin="0px auto 40px" height="60vh"/>
             <Heading size={3} caps textColor="primary" textFont="primary">
@@ -232,27 +250,11 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide bgImage={images.reduxDevtools.replace("/", "")} bgDarken={0.3}>
-            <Appear fid="1">
+            <Appear>
               <Heading size={1} caps fit textColor="primary">
                 Demo
               </Heading>
             </Appear>
-          </Slide>
-
-          <Slide bgColor="primary">
-            <Heading caps fit>Flexible Layouts</Heading>
-            <Layout>
-              <Fill>
-                <Heading size={4} caps textColor="secondary" bgColor="white" margin={10}>
-                  Left
-                </Heading>
-              </Fill>
-              <Fill>
-                <Heading size={4} caps textColor="secondary" bgColor="white" margin={10}>
-                  Right
-                </Heading>
-              </Fill>
-            </Layout>
           </Slide>
 
           <Slide bgColor="black">
