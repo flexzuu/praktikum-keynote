@@ -58,7 +58,9 @@ const images = {
   example: require("../assets/example.png"),
   integration: require("../assets/integration.png"),
   coding: require("../assets/coding.jpg"),
-  api: require("../assets/api.png")
+  api: require("../assets/api.png"),
+  websiteBackground: require("../assets/websiteBackground.jpg"),
+  plenigoSpring: require("../assets/plenigoSpring.png")
 };
 
 preloader(images);
@@ -176,12 +178,10 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide bgImage={images.coding.replace("/", "")} bgDarken={0.75}>
-            <Appear fid="1">
-              <Heading size={1} fit caps lineHeight={1.5} textColor="primary">
-                Projekt
-              </Heading>
-            </Appear>
-            <Appear fid="2">
+            <Heading size={1} fit caps lineHeight={1.5} textColor="primary">
+              Projekt
+            </Heading>
+            <Appear>
               <Heading size={2} caps textColor="tertiary">
                 1. Api-tests
               </Heading>
@@ -216,6 +216,21 @@ export default class Presentation extends React.Component {
             Model Beispiel
             </Heading>
             <CodePane source={require("raw!../assets/paywall.example")} lang="java" />
+          </Slide>
+
+          <Slide bgImage={images.websiteBackground} bgDarken={0.75}>
+            <Heading size={1} fit caps lineHeight={1.5} textColor="primary">
+              Projekt
+            </Heading>
+            <Appear>
+              <Heading size={2} caps textColor="tertiary">
+                2. Umzug statische Webseite
+              </Heading>
+            </Appear>
+          </Slide>
+
+          <Slide bgColor="tertiary">
+            <Image src={images.plenigoSpring} width="140%" margin="-90px 0px 0px -180px"/>
           </Slide>
 
           <Slide transition={["fade"]} bgImage={images.plenigoWebsite.replace("/", "")} bgDarken={0.2} />
