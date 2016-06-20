@@ -206,14 +206,14 @@ export default class Presentation extends React.Component {
 
           <Slide bgColor="tertiary" transition={["fade"]}>
             <Heading size={4} caps textColor="primary">
-            Beispiel
+            Test Beispiel
             </Heading>
             <CodePane source={require("raw!../assets/api.example")} lang="java" />
           </Slide>
 
           <Slide bgColor="tertiary" transition={["fade"]}>
             <Heading size={4} caps textColor="primary">
-            Beispiel
+            Model Beispiel
             </Heading>
             <CodePane source={require("raw!../assets/paywall.example")} lang="java" />
           </Slide>
