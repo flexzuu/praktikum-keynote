@@ -44,6 +44,7 @@ require("spectacle/lib/themes/default/index.css");
 const images = {
   reduxAnimation: require("../assets/redux.gif"),
   clientServerInteraction: require("../assets/client-server-interaction.svg"),
+  reduxDevtools: require("../assets/redux-devtools.png"),
   city: require("../assets/city.jpg"),
   kat: require("../assets/kat.png"),
   logo: require("../assets/plenigo-logo.png"),
@@ -213,20 +214,10 @@ export default class Presentation extends React.Component {
               Client Server Interaction
             </Heading>
           </Slide>
-          <Slide bgImage={images.city.replace("/", "")} bgDarken={0.75}>
+          <Slide bgImage={images.reduxDevtools.replace("/", "")} bgDarken={0.3}>
             <Appear fid="1">
               <Heading size={1} caps fit textColor="primary">
-                Full Width
-              </Heading>
-            </Appear>
-            <Appear fid="2">
-              <Heading size={1} caps fit textColor="tertiary">
-                Adjustable Darkness
-              </Heading>
-            </Appear>
-            <Appear fid="3">
-              <Heading size={1} caps fit textColor="primary">
-                Background Imagery
+                Demo
               </Heading>
             </Appear>
           </Slide>
