@@ -235,6 +235,20 @@ export default class Presentation extends React.Component {
 
           <Slide bgColor="tertiary">
             <Heading size={2} caps textColor="primary">
+              Umzug von Grails auf Spring
+            </Heading>
+            <List>
+              <Appear><ListItem>Inline style based theme system</ListItem></Appear>
+              <Appear><ListItem>Autofit text</ListItem></Appear>
+              <Appear><ListItem>Flexbox layout system</ListItem></Appear>
+              <Appear><ListItem>React-Router navigation</ListItem></Appear>
+              <Appear><ListItem>PDF export</ListItem></Appear>
+              <Appear><ListItem>And...</ListItem></Appear>
+            </List>
+          </Slide>
+
+          <Slide bgColor="tertiary">
+            <Heading size={2} caps textColor="primary">
               Nicht nur statischer Inhalt
             </Heading>
             <List>
@@ -272,56 +286,6 @@ export default class Presentation extends React.Component {
             </Heading>
           </Slide>
 
-          <Slide transition={["fade"]} bgImage={images.reduxDevtools.replace("/", "")} bgDarken={0.2} />
-          <Slide transition={["fade"]} bgImage={images.reduxDevtools.replace("/", "")} bgDarken={0.75}>
-            <Heading size={1} caps fit textColor="primary">
-              Demo
-            </Heading>
-          </Slide>
-
-          <Slide bgColor="black">
-            <BlockQuote>
-              <Quote>Wonderfully formatted quotes</Quote>
-              <Cite>Ken Wheeler</Cite>
-            </BlockQuote>
-          </Slide>
-
-          <Slide bgColor="tertiary">
-            <Heading caps fit size={1} textColor="primary">
-              Inline Markdown
-            </Heading>
-            <Markdown>
-              {`
-![Markdown Logo](${images.markdown.replace("/", "")})
-
-You can write inline images, [Markdown Links](http://commonmark.org), paragraph text and most other markdown syntax
-* Lists too!
-* With ~~strikethrough~~ and _italic_
-* And lets not forget **bold**
-              `}
-            </Markdown>
-          </Slide>
-
-          <Slide bgColor="primary">
-            <Heading caps fit size={1} textColor="tertiary">
-              Smooth
-            </Heading>
-            <Heading caps fit size={1} textColor="secondary">
-              Combinable Transitions
-            </Heading>
-          </Slide>
-
-          <Slide bgColor="secondary" textColor="primary">
-            <List>
-              <Appear><ListItem>Inline style based theme system</ListItem></Appear>
-              <Appear><ListItem>Autofit text</ListItem></Appear>
-              <Appear><ListItem>Flexbox layout system</ListItem></Appear>
-              <Appear><ListItem>React-Router navigation</ListItem></Appear>
-              <Appear><ListItem>PDF export</ListItem></Appear>
-              <Appear><ListItem>And...</ListItem></Appear>
-            </List>
-          </Slide>
-
           <Slide align="center top" bgColor="primary">
             <Heading size={2} caps fit textColor="tertiary">
               View: React
@@ -329,6 +293,13 @@ You can write inline images, [Markdown Links](http://commonmark.org), paragraph 
             <CodeSplit source={require("raw!../assets/interactive.example")}>
               <Interactive/>
             </CodeSplit>
+          </Slide>
+
+          <Slide transition={["fade"]} bgImage={images.reduxDevtools.replace("/", "")} bgDarken={0.2} />
+          <Slide transition={["fade"]} bgImage={images.reduxDevtools.replace("/", "")} bgDarken={0.75}>
+            <Heading size={1} caps fit textColor="primary">
+              Demo
+            </Heading>
           </Slide>
 
         </Deck>
