@@ -75,6 +75,7 @@ export default class Presentation extends React.Component {
     return (
       <Spectacle theme={theme}>
         <Deck transition={["fade", "slide"]} transitionDuration={500} progress="bar">
+
           <Slide bgImage={images.man.replace("/", "")} bgDarken={0.7}>
             <Heading size={2} caps fit lineHeight={1.5} textColor="tertiary">
               Praxissemester bei
@@ -84,6 +85,7 @@ export default class Presentation extends React.Component {
               Fabian Beliza & Jonas Faber
             </Text>
           </Slide>
+
           <Slide bgColor="tertiary" notes="Bisher ist die technische Realisierung aufwändig und teuer, somit gerade für kleinere und mittlere Anbieter und Verlage kaum zu realisieren">
                 <Layout>
                 <Fill>
@@ -96,6 +98,7 @@ export default class Presentation extends React.Component {
                 </Fill>
             </Layout>
           </Slide>
+
           <Slide bgColor="tertiary" notes="Plenigo Kunden zahlen eine monatliche Miete sowie ein Provision auf Verkäufe">
             <Heading size={4} caps lineHeight={1.5} textColor="primary">Paid-Content</Heading>
               <Layout>
@@ -114,6 +117,7 @@ export default class Presentation extends React.Component {
                 </Fill>
               </Layout>
           </Slide>
+
           <Slide bgColor="tertiary">
             <Heading size={4} caps lineHeight={1.5} textColor="primary">Was bietet plenigo?</Heading>
               <Layout>
@@ -134,6 +138,7 @@ export default class Presentation extends React.Component {
                 </Fill>
               </Layout>
           </Slide>
+
           <Slide bgImage={images.tablet.replace("/", "")} bgDarken={0.75} notes=
           "Markt digitaler Produkte. E-Publishing ist des am stärksten wachsende Segment. Plenigo peilt einen Umsatz von 13 Mio. € in 2018 an"
           >
@@ -154,6 +159,7 @@ export default class Presentation extends React.Component {
               <ListItem>TV / Video</ListItem>
             </List>
           </Slide>
+
           <Slide bgColor="tertiary">
             <Heading size={5} caps lineHeight={1.5} textColor="primary">
             Funktionsweise
@@ -167,17 +173,18 @@ export default class Presentation extends React.Component {
               </Fill>
             </Layout>
           </Slide>
+
           <Slide bgImage={images.coding.replace("/", "")} bgDarken={0.75}>
-          <Appear fid="1">
-            <Heading size={1} fit caps lineHeight={1.5} textColor="primary">
-              Projekte
-            </Heading>
-          </Appear>
-          <Appear fid="2">
-            <Heading size={2} caps textColor="tertiary">
-              I. Api-tests
-            </Heading>
-          </Appear>
+            <Appear fid="1">
+              <Heading size={1} fit caps lineHeight={1.5} textColor="primary">
+                Projekte
+              </Heading>
+            </Appear>
+            <Appear fid="2">
+              <Heading size={2} caps textColor="tertiary">
+                I. Api-tests
+              </Heading>
+            </Appear>
           </Slide>
 
           <Slide bgColor="tertiary">
@@ -197,7 +204,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide bgColor="tertiary">
-              <CodeSplit source={require("raw!../assets/api.example")}>
+              <CodeSplit source={require("raw!../assets/api.example")} lang="java">
                 <Text> Test </Text>
               </CodeSplit>
           </Slide>
@@ -208,12 +215,14 @@ export default class Presentation extends React.Component {
               Redux
             </Heading>
           </Slide>
+
           <Slide bgColor="tertiary" notes="Client Server Interaction">
             <Image src={images.clientServerInteraction.replace("/", "")} margin="0px auto 40px" height="60vh"/>
             <Heading size={3} caps textColor="primary" textFont="primary">
               Client Server Interaction
             </Heading>
           </Slide>
+
           <Slide bgImage={images.reduxDevtools.replace("/", "")} bgDarken={0.3}>
             <Appear fid="1">
               <Heading size={1} caps fit textColor="primary">
@@ -221,6 +230,7 @@ export default class Presentation extends React.Component {
               </Heading>
             </Appear>
           </Slide>
+
           <Slide bgColor="primary">
             <Heading caps fit>Flexible Layouts</Heading>
             <Layout>
@@ -236,12 +246,14 @@ export default class Presentation extends React.Component {
               </Fill>
             </Layout>
           </Slide>
+
           <Slide bgColor="black">
             <BlockQuote>
               <Quote>Wonderfully formatted quotes</Quote>
               <Cite>Ken Wheeler</Cite>
             </BlockQuote>
           </Slide>
+
           <Slide bgColor="tertiary">
             <Heading caps fit size={1} textColor="primary">
               Inline Markdown
@@ -257,6 +269,7 @@ You can write inline images, [Markdown Links](http://commonmark.org), paragraph 
               `}
             </Markdown>
           </Slide>
+
           <Slide bgColor="primary">
             <Heading caps fit size={1} textColor="tertiary">
               Smooth
@@ -265,6 +278,7 @@ You can write inline images, [Markdown Links](http://commonmark.org), paragraph 
               Combinable Transitions
             </Heading>
           </Slide>
+
           <Slide bgColor="secondary" textColor="primary">
             <List>
               <Appear><ListItem>Inline style based theme system</ListItem></Appear>
@@ -275,6 +289,7 @@ You can write inline images, [Markdown Links](http://commonmark.org), paragraph 
               <Appear><ListItem>And...</ListItem></Appear>
             </List>
           </Slide>
+
           <Slide align="center top" bgColor="primary">
             <Heading size={2} caps fit textColor="tertiary">
               View: React
@@ -283,6 +298,7 @@ You can write inline images, [Markdown Links](http://commonmark.org), paragraph 
               <Interactive/>
             </CodeSplit>
           </Slide>
+
         </Deck>
       </Spectacle>
     );
