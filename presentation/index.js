@@ -45,7 +45,7 @@ const images = {
   reduxAnimation: require("../assets/redux.gif"),
   clientServerInteraction: require("../assets/client-server-interaction.svg"),
   reduxDevtools: require("../assets/redux-devtools.png"),
-  plenigoWebsite: require("../assets/plenigo-spring-website.png"),
+  plenigoWebsite: require("../assets/plenigoWebsite.png"),
   city: require("../assets/city.jpg"),
   kat: require("../assets/kat.png"),
   logo: require("../assets/plenigo-logo.png"),
