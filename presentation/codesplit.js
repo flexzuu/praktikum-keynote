@@ -6,12 +6,12 @@ import {
   Layout
 } from "spectacle";
 
-const CodeSplit = function ({children, source}) {
+const CodeSplit = function ({children, source, lang = "jsx"}) {
   return (
     <Layout>
       <Fill style={{paddingRight: "5px"}}>
         <CodePane
-          lang="jsx"
+          lang={lang}
           source={source}
         />
       </Fill>
