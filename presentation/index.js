@@ -52,7 +52,8 @@ const images = {
   about: require("../assets/about-business.png"),
   access: require("../assets/access.png"),
   tablet: require("../assets/tablet.jpg"),
-  example: require("../assets/example.png")
+  example: require("../assets/example.png"),
+  integration: require("../assets/integration.png")
 };
 
 preloader(images);
@@ -129,13 +130,9 @@ export default class Presentation extends React.Component {
                 </Fill>
               </Layout>
           </Slide>
-          <Slide bgColor="tertiary">
-          <Heading size={5} caps lineHeight={1.5} textColor="primary">
-          Funktionsweise
-          </Heading>
-            <Image width="50%" src={images.example}/>
-          </Slide>
-          <Slide bgImage={images.tablet.replace("/", "")} bgDarken={0.75}>
+          <Slide bgImage={images.tablet.replace("/", "")} bgDarken={0.75} notes=
+          "Markt digitaler Produkte. E-Publishing ist des am stärksten wachsende Segment. Plenigo peilt einen Umsatz von 13 Mio. € in 2018 an"
+          >
             <Heading size={4} caps lineHeight={1.5} textColor="primary">
               Der Markt
             </Heading>
@@ -147,11 +144,24 @@ export default class Presentation extends React.Component {
               Der Markt ist segmentiert in:
             </Text>
             <List textColor="tertiary" textAlign="left">
-              <ListItem>E-Publishing</ListItem>
+              <ListItem><b>E-Publishing</b></ListItem>
               <ListItem>Musik / Radio</ListItem>
               <ListItem>Gaming</ListItem>
               <ListItem>TV / Video</ListItem>
             </List>
+          </Slide>
+          <Slide bgColor="tertiary">
+            <Heading size={5} caps lineHeight={1.5} textColor="primary">
+            Funktionsweise
+            </Heading>
+            <Layout>
+              <Fill>
+                <Image margin="-20px" width="100%" src={images.example}/>
+              </Fill>
+              <Fill>
+                <Image margin="20px" width="100%" src={images.integration}/>
+              </Fill>
+            </Layout>
           </Slide>
           <Slide bgColor="tertiary" notes="How Redux works.">
             <Image src={images.reduxAnimation.replace("/", "")} margin="0px auto 40px" height="60vh"/>
