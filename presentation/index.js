@@ -234,7 +234,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide bgColor="tertiary">
-            <Heading size={2} caps textColor="primary">
+            <Heading size={4} caps textColor="primary">
               Umzug von Grails auf Spring
             </Heading>
             <List>
