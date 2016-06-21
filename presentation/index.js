@@ -61,7 +61,8 @@ const images = {
   websiteBackground: require("../assets/websiteBackground.jpg"),
   plenigoSpring: require("../assets/plenigoSpring.png"),
   control: require("../assets/control.jpg"),
-  dashboard: require("../assets/adminDashboard.png")
+  dashboard: require("../assets/adminDashboard.png"),
+  paywallApi: require("../assets/paywallAPI.png")
 };
 
 preloader(images);
@@ -193,26 +194,30 @@ export default class Presentation extends React.Component {
             <Image src={images.api} width="140%" margin="-90px 0px 0px -180px"/>
           </Slide>
 
-          <Slide bgColor="tertiary">
+          <Slide bgColor="tertiary" notes="Test-System nicht live! Anfragen an Pfad. Antwort mit Junit vergleichen">
             <Heading size={4} caps lineHeight={1.5} textColor="primary">
             Ablauf
             </Heading>
             <List textColor="secondary" textAlign="left">
-              <ListItem>Testdaten erstellen</ListItem>
-              <ListItem>Anfragen an API senden</ListItem>
-              <ListItem>Antwort erhalten</ListItem>
-              <ListItem>Antwort mit erwartetem Ergebnis vergleichen</ListItem>
+              <Appear><ListItem>Testdaten erstellen</ListItem></Appear>
+              <Appear><ListItem>Anfragen an API senden</ListItem></Appear>
+              <Appear><ListItem>Antwort erhalten</ListItem></Appear>
+              <Appear><ListItem>Antwort mit erwartetem Ergebnis vergleichen</ListItem></Appear>
             </List>
           </Slide>
 
-          <Slide bgColor="tertiary" transition={["fade"]}>
+          <Slide bgColor="tertiary" notes="Beispiel API-Doc. Bei POST-Anfragen mit Request Beispiel/Model">
+            <Image src={images.paywallApi} width="120%" margin="-60px 0px 0px -90px"/>
+          </Slide>
+
+          <Slide bgColor="tertiary" transition={["fade"]} notes="Jersey für Webanfragen, Jackson als JSON Parser">
             <Heading size={4} caps textColor="primary">
             Test Beispiel
             </Heading>
             <CodePane source={require("raw!../assets/api.example")} lang="java" />
           </Slide>
 
-          <Slide bgColor="tertiary" transition={["fade"]}>
+          <Slide bgColor="tertiary" transition={["fade"]} notes="Probleme: Test-Flags nicht vorhanden, Dokumentation teilweise falsch">
             <Heading size={4} caps textColor="primary">
             Model Beispiel
             </Heading>
@@ -234,7 +239,7 @@ export default class Presentation extends React.Component {
             <Image src={images.plenigoSpring} width="140%" margin="-90px 0px 0px -180px"/>
           </Slide>
 
-          <Slide bgColor="tertiary" notes="Grails wäre bei Update zerschossen. Server liefert statisches HTML aus">
+          <Slide bgColor="tertiary" notes="Grails wäre bei Update zerschossen. Server liefert statisches HTML aus. Client hält CSS usw.">
             <Heading size={4} caps textColor="primary">
               Umzug von Grails auf Spring
             </Heading>
