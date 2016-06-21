@@ -4,26 +4,26 @@ import React from "react";
 // Import Spectacle Core tags
 import {
   Appear,
-  BlockQuote,
-  Cite,
+  // BlockQuote,
+  // Cite,
   CodePane,
   Deck,
   Fill,
   Heading,
   Image,
   Layout,
-  Link,
+  // Link,
   ListItem,
   List,
-  Markdown,
-  Quote,
+  // Markdown,
+  // Quote,
   Slide,
   Spectacle,
-  Text,
-  Table,
-  TableRow,
-  TableHeaderItem,
-  TableItem
+  Text
+  // Table,
+  // TableRow,
+  // TableHeaderItem,
+  // TableItem
 } from "spectacle";
 
 // Import image preloader util
