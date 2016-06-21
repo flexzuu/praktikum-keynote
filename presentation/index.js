@@ -257,12 +257,20 @@ export default class Presentation extends React.Component {
               Nicht nur statischer Inhalt
             </Heading>
             <List>
-              <Appear><ListItem>Inline style based theme system</ListItem></Appear>
-              <Appear><ListItem>Autofit text</ListItem></Appear>
-              <Appear><ListItem>Flexbox layout system</ListItem></Appear>
-              <Appear><ListItem>React-Router navigation</ListItem></Appear>
-              <Appear><ListItem>PDF export</ListItem></Appear>
-              <Appear><ListItem>And...</ListItem></Appear>
+              <Appear><ListItem>Zwei Arten von Kunden
+                <List>
+                  <Appear><ListItem>Händler</ListItem></Appear>
+                  <Appear><ListItem>Nutzer</ListItem></Appear>
+                </List>
+              </ListItem></Appear>
+              <Appear><ListItem>Registrierung</ListItem></Appear>
+              <Appear><ListItem>Login</ListItem></Appear>
+              <Appear><ListItem>Zwei Factor Authentifizierung
+                <List>
+                  <Appear><ListItem>SMS</ListItem></Appear>
+                  <Appear><ListItem>Google Authentificator</ListItem></Appear>
+                </List>
+              </ListItem></Appear>
             </List>
           </Slide>
 
@@ -294,6 +302,15 @@ export default class Presentation extends React.Component {
             </List>
           </Slide>
 
+          <Slide align="center top" bgColor="primary">
+            <Heading size={2} caps fit textColor="tertiary">
+              View: React
+            </Heading>
+            <CodeSplit source={require("raw!../assets/interactive.example")}>
+              <Interactive/>
+            </CodeSplit>
+          </Slide>
+
           <Slide bgColor="tertiary" notes="How Redux works.">
             <Image src={images.reduxAnimation.replace("/", "")} margin="0px auto 40px" height="60vh"/>
             <Heading size={3} caps textColor="primary" textFont="primary">
@@ -308,22 +325,12 @@ export default class Presentation extends React.Component {
             </Heading>
           </Slide>
 
-          <Slide align="center top" bgColor="primary">
-            <Heading size={2} caps fit textColor="tertiary">
-              View: React
-            </Heading>
-            <CodeSplit source={require("raw!../assets/interactive.example")}>
-              <Interactive/>
-            </CodeSplit>
-          </Slide>
-
           <Slide transition={["fade"]} bgImage={images.reduxDevtools.replace("/", "")} bgDarken={0.2} />
           <Slide transition={["fade"]} bgImage={images.reduxDevtools.replace("/", "")} bgDarken={0.75}>
             <Heading size={1} caps fit textColor="primary">
               Demo
             </Heading>
           </Slide>
-
         </Deck>
       </Spectacle>
     );

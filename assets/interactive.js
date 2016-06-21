@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Heading } from "spectacle";
+import Tri from "react-trianglify";
 
 export default class Interactive extends Component {
   constructor() {
@@ -29,14 +30,15 @@ export default class Interactive extends Component {
     };
     return (
       <div>
+        <Heading size={4} textColor="black">
+          The button has been clicked {this.state.count} times
+        </Heading>
       {this.state.count < 5 ?
         <div>
-          <Heading size={5} textColor="black">
-            The button has been clicked {this.state.count} times
-          </Heading>
+          <Tri seed={this.state.count * 10}/>
           <button style={styles} type="button" onClick={this.handleClick}>Click Me</button>
         </div> :
-          <Heading size={5} fit caps textColor="black">Easy there pal</Heading>
+          <Tri seed={this.state.count} cellSize={25} />
         }
       </div>
     );

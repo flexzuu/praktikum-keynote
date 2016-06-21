@@ -8,7 +8,7 @@ import {
 
 const CodeSplit = function ({children, source, lang = "jsx"}) {
   return (
-    <Layout>
+    <Layout style={{ marginLeft: -200 }}>
       <Fill style={{paddingRight: "5px"}}>
         <CodePane
           lang={lang}
