@@ -265,7 +265,7 @@ export default class Presentation extends React.Component {
               </ListItem></Appear>
               <Appear><ListItem>Registrierung</ListItem></Appear>
               <Appear><ListItem>Login</ListItem></Appear>
-              <Appear><ListItem>Zwei Factor Authentifizierung
+              <Appear><ListItem>Zwei Faktor Authentifizierung
                 <List>
                   <Appear><ListItem>SMS</ListItem></Appear>
                   <Appear><ListItem>Google Authentificator</ListItem></Appear>

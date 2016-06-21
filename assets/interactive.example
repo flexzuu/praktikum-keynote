@@ -15,19 +15,20 @@ export default class Interactive extends Component {
       count: this.state.count + 1
     });
   }
-  return (
-    <div>
-      <Heading size={4} textColor="black">
-        The button has been clicked {this.state.count} times
-      </Heading>
-    {this.state.count < 5 ?
+  render() {
+    return (
       <div>
-        <Tri seed={this.state.count}/>
-        <button style={styles} type="button" onClick={this.handleClick}>Click Me</button>
-      </div> :
-        <Tri seed={this.state.count} cellSize={25} />
-      }
-    </div>
-  );
+        <Heading size={4} textColor="black">
+          The button has been clicked {this.state.count} times
+        </Heading>
+      {this.state.count < 5 ?
+        <div>
+          <Tri seed={this.state.count * 10}/>
+          <button type="button" onClick={this.handleClick}>Click Me</button>
+        </div> :
+          <Tri seed={this.state.count} cellSize={25} />
+        }
+      </div>
+    );
   }
 }
